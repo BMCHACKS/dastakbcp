@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-    background-color: #000000; /* Brown background */
+    background-color: #000000; /* Black background */
     margin: 0;
     padding: 0;
     transition: background-image 1s ease; /* Smooth transition for background change */
@@ -8,19 +8,20 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     position: relative; /* Position relative for overlay */
+    display: flex; /* Use flexbox for body */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes full height */
 }
 
 header {
     text-align: center;
-    padding: 0px; /* Reduced padding for the header */
+    padding: 0; /* Reduced padding for the header */
     background-color: #ffd90000; /* Gold background for header */
     color: #333; /* Dark text color for contrast */
 }
 
 .footer {
-    position: absolute; /* Position the footer at the bottom */
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Align to the left */
+    position: relative; /* Change to relative positioning */
     width: 100%; /* Full width */
     text-align: center; /* Center the text */
     color: white; /* Text color */
@@ -47,7 +48,6 @@ header {
     z-index: 0; /* Ensure overlay is below content */
 }
 
-
 .nav {
     background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
     border-radius: 10px; /* Rounded corners */
@@ -55,7 +55,7 @@ header {
     backdrop-filter: blur(10px); /* Optional: keep the blur effect */
     overflow: hidden; /* Ensure child elements do not overflow */
     max-width: 600px; /* Set a maximum width for the nav */
-    margin: 10px auto 0; /* Center the nav and add top margin */
+    margin: 10px auto; /* Center the nav and add top margin */
     position: relative; /* Ensure it scrolls with the page */
     z-index: 2; /* Ensure it is above the overlay */
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
@@ -82,7 +82,6 @@ header {
     transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
 }
 
-
 .nav a:hover {
     border-color: #ffffff; /* Change border color on hover (gold) */
     color: #ffffff; /* Change text color on hover (gold) */
@@ -90,25 +89,13 @@ header {
     background-color: transparent; /* No solid fill */
 }
 
-
-
 main {
     display: flex; /* Use flexbox for centering */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     justify-content: center; /* Center children vertically */
-    height: 100vh; /* Full viewport height */
-    z-index: 1;
-}
-
-
-.footer {
-    margin-top: auto; /* Push footer to the bottom */
-    text-align: center; /* Center text */
-    color: white; /* Text color */
-    padding: 10px 0; /* Padding for the footer */
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
-    font-weight: 700; /* Use heavy weight */
+    flex: 1; /* Allow main to grow and fill space */
+    padding: 20px; /* Padding for main content */
 }
 
 .info-box {
@@ -155,4 +142,33 @@ main {
 .contact-phone,
 .contact-email {
     margin: 20px 0; /* Space above and below phone/email */
+}
+
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        padding: 10px; /* Add padding for mobile */
+    }
+
+    .nav li {
+        display: block; /* Stack list items vertically */
+        margin: 5px 0; /* Space between tabs */
+    }
+
+    .contact-box {
+        width: 90%; /* Make contact boxes responsive */
+        margin: 5px auto; /* Center contact boxes */
+    }
+
+    .footer {
+        padding: 10px; /* Adjust footer padding for mobile */
+    }
+
+    main {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .info-box {
+        margin-bottom: 20px; /* Adjust margin for mobile */
+    }
 }
