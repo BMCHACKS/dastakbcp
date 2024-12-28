@@ -149,7 +149,7 @@ main {
 .contact-phone,
 .contact-email {
     margin: 20px 0; /* Space above and below phone/email */
-    font-weight: 700;
+    font-weight: 300;
 }
 
 
