@@ -1,0 +1,158 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    background-color: #000000; /* Brown background */
+    margin: 0;
+    padding: 0;
+    transition: background-image 1s ease; /* Smooth transition for background change */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Position relative for overlay */
+}
+
+header {
+    text-align: center;
+    padding: 0px; /* Reduced padding for the header */
+    background-color: #ffd90000; /* Gold background for header */
+    color: #333; /* Dark text color for contrast */
+}
+
+.footer {
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for the footer */
+    margin-top: 20px; /* Space above the footer */
+    z-index: 2; /* Ensure footer is above the overlay */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the footer */
+    backdrop-filter: blur(0px); /* Blur effect for the footer */
+}
+
+.menu {
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.overlay {
+    position: fixed; /* Change to fixed to cover the entire viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensure overlay is below content */
+}
+
+
+.nav {
+    background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0px; /* Padding inside the nav */
+    backdrop-filter: blur(10px); /* Optional: keep the blur effect */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    max-width: 600px; /* Set a maximum width for the nav */
+    margin: 10px auto 0; /* Center the nav and add top margin */
+    position: relative; /* Ensure it scrolls with the page */
+    z-index: 2; /* Ensure it is above the overlay */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-weight: 700; /* Use heavy weight */
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.nav li {
+    display: inline; /* Display list items inline */
+    margin: 0 0px; /* Space between tabs */
+}
+
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 1.2em; /* Font size for links */
+    padding: 10px 5px; /* Padding for the links */
+    border-radius: 15px; /* Rounded corners for the links */
+    border: 2px solid transparent; /* Initial border (transparent) */
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+
+.nav a:hover {
+    border-color: #ffffff; /* Change border color on hover (gold) */
+    color: #ffffff; /* Change text color on hover (gold) */
+    box-shadow: 0 0 100px #ffffff, 0 0 10px #ffffff; /* Glowing effect */
+    background-color: transparent; /* No solid fill */
+}
+
+
+
+main {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    height: 100vh; /* Full viewport height */
+    z-index: 1;
+}
+
+
+.footer {
+    margin-top: auto; /* Push footer to the bottom */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for the footer */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-weight: 700; /* Use heavy weight */
+}
+
+.info-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    backdrop-filter: blur(10px); /* Blur effect */
+    max-width: 700px; /* Max width for the info box */
+    text-align: center; /* Center text */
+    color: rgb(255, 255, 255); /* Text color */
+    margin-top: 20px; /* Space above the info box */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-weight: 300; /* Use light weight */
+    z-index: 2;
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of boxes */
+    justify-content: center; /* Center the boxes */
+    gap: 20px; /* Space between boxes */
+    margin-top: 20px; /* Space above the contact boxes */
+}
+
+.contact-box {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background for contact boxes */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the contact box */
+    width: 300px; /* Fixed width for contact boxes */
+    text-align: center; /* Center text */
+    color: rgb(255, 255, 255); /* Text color */
+}
+
+.contact-name {
+    font-weight: bold; /* Bold font for name */
+    margin: 0; /* Remove default margin */
+}
+
+.contact-title {
+    font-weight: 300; /* Light font for title */
+    margin: 10px 0; /* Space above and below title */
+}
+
+.contact-phone,
+.contact-email {
+    margin: 20px 0; /* Space above and below phone/email */
+}

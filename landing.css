@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    height: 100vh; /* Full height of the viewport */
+    background-color: black; /* Fallback background color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: background-image 1s ease; /* Smooth transition for background change */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Position relative for overlay */
+}
+
+.overlay {
+    position: absolute; /* Position overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure overlay is above the background but below content */
+}
+
+.menu {
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.logo {
+    max-width: 400px; /* Adjust logo size */
+    margin-bottom: 20px; /* Space below the logo */
+    transition: transform 0.2s ease; /* Smooth transition for the tilt effect */
+}
+
+.nav {
+    background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the nav */
+    backdrop-filter: blur(10px);
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.nav li {
+    display: inline; /* Display list items inline */
+    margin: 0 0px; /* Space between tabs */
+}
+
+
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 1.2em; /* Font size for links */
+    padding: 10px 5px; /* Padding for the links */
+    border-radius: 15px; /* Rounded corners for the links */
+    border: 2px solid transparent; /* Initial border (transparent) */
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav a:hover {
+    border-color: #ffffff; /* Change border color on hover (gold) */
+    color: #ffffff; /* Change text color on hover (gold) */
+    box-shadow: 0 0 100px #ffffff, 0 0 10px #ffffff; /* Glowing effect */
+    background-color: transparent; /* No solid fill */
+}
+
+.footer {
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for the footer */
+    z-index: 2; /* Ensure footer is above the overlay */
+    background-color: transparent; /* No background color */
+}

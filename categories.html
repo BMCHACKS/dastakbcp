@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastak</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- <header>
+        <h1>Dastak</h1>
+    </header> -->
+    <main>
+        <div class="overlay"></div>
+        <div class="menu">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>-</li>
+                    <li><a href="info.html">Info</a></li>
+                    <li>-</li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li>-</li>
+                    <li><a href="#invite">Invite</a></li>
+                    <li>-</li>
+                    <li><a href="#register">Register</a></li>
+                    <li>-</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="card-container">
+            <div class="card" data-category="starlit-saga">     
+                <a href="files/starlit-saga.pdf" target="_blank">
+                    <img src="images/starlit-saga.png" alt="Starlit Saga">
+                    <div class="overlay"></div>
+                    <!-- <h2>Starlit Saga</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="the-bacchic-judgment">
+                <a href="files/the-bacchic-judgment.pdf" target="_blank">
+                    <img src="images/the-bacchic-judgment.png" alt="The Bacchic Judgment">
+                    <div class="overlay"></div>
+                    <!-- <h2>The Bacchic Judgment</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="showdown">
+                <a href="files/showdown.pdf" target="_blank">
+                    <img src="images/showdown.png" alt="Showdown">
+                    <div class="overlay"></div>
+                    <!-- <h2>Showdown</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="the-chamber-of-secrets">
+                <a href="files/the-chamber-of-secrets.pdf" target="_blank">
+                    <img src="images/the-chamber-of-secrets.png" alt="The Chamber of Secrets">
+                    <div class="overlay"></div>
+                    <!-- <h2>The Chamber of Secrets</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="stemverse">
+                <a href="files/stemverse.pdf" target="_blank">
+                    <img src="images/stemverse.png" alt="Stemverse">
+                    <div class="overlay"></div>
+                    <!-- <h2>Stemverse</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="meraki">
+                <a href="files/meraki.pdf" target="_blank">
+                    <img src="images/meraki.png" alt="Meraki">
+                    <div class="overlay"></div>
+                    <!-- <h2>Meraki</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="dance-fusion">
+                <a href="files/dance-fusion.pdf" target="_blank">
+                    <img src="images/dance-fusion.png" alt="Dance Fusion">
+                    <div class="overlay"></div>
+                    <!-- <h2>Dance Fusion</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="reel-showcase">
+                <a href="files/reel-showcase.pdf" target="_blank">
+                    <img src="images/reel-showcase.png" alt="Reel Showcase">
+                    <div class="overlay"></div>
+                    <!-- <h2>Reel Showcase</h2> -->
+                </a>
+            </div>
+            <div class="card" data-category="canvas-of-beauty">
+                <a href="files/canvas-of-beauty.pdf" target="_blank">
+                    <img src="images/canvas-of-beauty.png" alt="Canvas of Beauty">
+                    <div class="overlay"></div>
+                    <!-- <h2>Canvas of Beauty</h2> -->
+                </a>
+            </div>
+            <div class="card card-full" data-category="athletium">
+                <a href="files/athletium.pdf" target="_blank">
+                    <img src="images/athletium.png" alt="Athletium">
+                    <div class="overlay"></div>
+                    <!-- <h2>Athletium</h2> -->
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        Made By Basil.MC & Qasim.M | © 2025 Dastak All Rights Reserved
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Array of background variations
+        const backgrounds = [
+            'url("images/mp1.png")',
+            'url("images/mp2.png")',
+            'url("images/mp3.png")',
+            'url("images/mp4.png")',
+        ];
+    
+        let currentIndex = 0; // Start with the first background
+        document.body.style.backgroundImage = backgrounds[currentIndex];
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length; 
+            document.body.style.backgroundImage = backgrounds[currentIndex];
+        }
+    
+        setInterval(changeBackground, 2000);
+    </script>
+</body>
+</html>

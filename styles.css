@@ -1,0 +1,186 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    background-color: #000000; /* Brown background */
+    margin: 0;
+    padding: 0;
+    transition: background-image 1s ease; /* Smooth transition for background change */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Position relative for overlay */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffd90000; /* Gold background for header */
+    color: #333; /* Dark text color for contrast */
+}
+
+.overlay {
+    position: fixed; /* Change to fixed to cover the entire viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensure overlay is below content */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff; /* Keep card background white for contrast */
+    border: .2px solid #34273e82; /* Remove the border */
+    border-radius: 10px;
+    height: 310px; /* Set a fixed height for rectangular boxes */
+    display: flex;
+    flex-direction: column; /* Stack image and heading vertically */
+    align-items: center;
+    justify-content: center; /* Center content */
+    overflow: hidden; /* Clip the image if it overflows */
+    transition: transform 0.2s, box-shadow 0.3s; /* Smooth transition for the shadow */
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* For positioning the overlay */
+}
+
+.card img {
+    width: 100%; /* Make image fill the width of the card */
+    height: 100%; /* Make image fill the height of the card */
+    object-fit: cover; /* Cover the area without distortion */
+    border-top-left-radius: 10px; /* Rounded corners for the top */
+    border-top-right-radius: 10px; /* Rounded corners for the top */
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Ensure the image is behind the text */
+    opacity: 5;
+}
+
+.card .overlay {
+    position: absolute; /* Position the overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 2; /* Ensure the overlay is above the image */
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+.card h2 {
+    text-align: center; /* Center the heading */
+    margin: 0; /* Remove margin */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold; /* Ensure the heading is bold */
+    position: absolute; /* Position the text absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: #ffffff; /* Gold text color for visibility */
+    z-index: 3; /* Ensure the text is above the overlay */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for the card */
+    border: .2px solid #34273e3b; /* Remove the border */
+    border-radius: 10px;
+    height: 310px; /* Set a fixed height for rectangular boxes */
+    display: flex;
+    flex-direction: column; /* Stack image and heading vertically */
+    align-items: center;
+    justify-content: center; /* Center content */
+    overflow: hidden; /* Clip the image if it overflows */
+    transition: transform 0.2s, box-shadow 0.3s; /* Smooth transition for the shadow */
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the overlay */
+    backdrop-filter: blur(10px); /* Blur effect for the card */
+}
+
+.card:hover .overlay {
+    opacity: 0; /* Hide the overlay on hover */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Glow effect */
+    /* box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 50px rgb(255, 255, 255);  */
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+/* Style for the last card to span all three columns */
+.card-full {
+    grid-column: span 3; /* Make this card span 3 columns */
+    margin-bottom: 100px; /* Add space below the card */
+}
+
+.footer {
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for the footer */
+    margin-top: 20px; /* Space above the footer */
+    z-index: 2; /* Ensure footer is above the overlay */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the footer */
+    backdrop-filter: blur(0px); /* Blur effect for the footer */
+}
+
+.menu {
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.nav {
+    background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0px; /* Padding inside the nav */
+    backdrop-filter: blur(10px); /* Optional: keep the blur effect */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    max-width: 600px; /* Set a maximum width for the nav */
+    margin: 10px auto 0; /* Center the nav and add top margin */
+    position: relative; /* Ensure it scrolls with the page */
+    z-index: 2; /* Ensure it is above the overlay */
+}
+
+.nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.nav li {
+    display: inline; /* Display list items inline */
+    margin: 0 0px; /* Space between tabs */
+}
+
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 1.2em; /* Font size for links */
+    padding: 10px 5px; /* Padding for the links */
+    border-radius: 15px; /* Rounded corners for the links */
+    border: 2px solid transparent; /* Initial border (transparent) */
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+
+.nav a:hover {
+    border-color: #ffffff; /* Change border color on hover (gold) */
+    color: #ffffff; /* Change text color on hover (gold) */
+    box-shadow: 0 0 100px #ffffff, 0 0 10px #ffffff; /* Glowing effect */
+    background-color: transparent; /* No solid fill */
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon -->
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>-</li>
+                    <li><a href="info.html">Info</a></li>
+                    <li>-</li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li>-</li>
+                    <li><a href="#invite">Invite</a></li>
+                    <li>-</li>
+                    <li><a href="#register">Register</a></li>
+                    <li>-</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="info-box">
+            <h1>Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h2 class="contact-name">Qasim Malik</h2>
+                    <p class="contact-title">Head Boy</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: johndoe@example.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2 class="contact-name">Basil MC</h2>
+                    <p class="contact-title">Developer</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: janesmith@example.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2 class="contact-name">Basil MC 2</h2>
+                    <p class="contact-title">Developer</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: janesmith@example.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2 class="contact-name">Basil MC</h2>
+                    <p class="contact-title">Developer</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: janesmith@example.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2 class="contact-name">Basil MC</h2>
+                    <p class="contact-title">Developer</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: janesmith@example.com</p>
+                </div>
+                <div class="contact-box">
+                    <h2 class="contact-name">Basil MC</h2>
+                    <p class="contact-title">Developer</p>
+                    <p class="contact-phone">Phone: +92 0332 0000 000</p>
+                    <p class="contact-email">Email: janesmith@example.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Made By Basil.MC & Qasim.M | © 2025 Dastak All Rights Reserved
+    </footer>
+    <div class="overlay"></div>
+    <script>
+        // Array of background variations
+        const backgrounds = [
+            'url("images/mp1.png")',
+            'url("images/mp2.png")',
+            'url("images/mp3.png")',
+            'url("images/mp4.png")',
+        ];
+    
+        let currentIndex = 0; // Start with the first background
+        document.body.style.backgroundImage = backgrounds[currentIndex];
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length; 
+            document.body.style.backgroundImage = backgrounds[currentIndex];
+        }
+    
+        setInterval(changeBackground, 2000);
+                // Logo tilt effect
+                const logo = document.querySelector('.logo');
+        const tiltRadius = 500; // Radius for the tilt effect
+
+        document.addEventListener('mousemove', (event) => {
+            const rect = logo.getBoundingClientRect();
+            const logoCenterX = rect.left + rect.width / 2;
+            const logoCenterY = rect.top + rect.height / 2;
+
+            const deltaX = event.clientX - logoCenterX;
+            const deltaY = event.clientY - logoCenterY;
+            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+            if (distance < tiltRadius) {
+                const tiltX = (deltaY / tiltRadius) * 20; // Adjust the multiplier for tilt sensitivity
+                const tiltY = (deltaX / tiltRadius) * -20; // Adjust the multiplier for tilt sensitivity
+                logo.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            } else {
+                logo.style.transform = 'rotateX(0deg) rotateY(0deg)'; // Reset tilt
+            }
+        });
+    </script>
+</body>
+</html>
