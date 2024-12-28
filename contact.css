@@ -30,6 +30,7 @@ header {
     z-index: 2; /* Ensure footer is above the overlay */
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the footer */
     backdrop-filter: blur(0px); /* Blur effect for the footer */
+    font-weight: 700;
 }
 
 .menu {
@@ -42,29 +43,34 @@ header {
     position: fixed; /* Change to fixed to cover the entire viewport */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+    height: 100%; /* Full viewport height */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 0; /* Ensure overlay is below content */
 }
 
 .nav {
-    background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
-    border-radius: 10px; /* Rounded corners */
-    padding: 0px; /* Padding inside the nav */
-    backdrop-filter: blur(10px); /* Optional: keep the blur effect */
-    overflow: hidden; /* Ensure child elements do not overflow */
-    max-width: 600px; /* Set a maximum width for the nav */
-    margin: 10px auto; /* Center the nav and add top margin */
-    position: relative; /* Ensure it scrolls with the page */
-    z-index: 2; /* Ensure it is above the overlay */
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
-    font-weight: 700; /* Use heavy weight */
+    display: flex; /* Use flexbox for nav */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    background-color: rgba(249, 249, 249, 0.181);
+    border-radius: 10px;
+    padding: 0px; /* Add padding for mobile */
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 10px auto;
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .nav ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Use flexbox for ul */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
 }
 
 .nav li {
@@ -73,14 +79,15 @@ header {
 }
 
 .nav a {
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* Link color */
-    font-size: 1.2em; /* Font size for links */
-    padding: 10px 5px; /* Padding for the links */
-    border-radius: 15px; /* Rounded corners for the links */
-    border: 2px solid transparent; /* Initial border (transparent) */
-    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none;
+    color: white;
+    font-size: 1vw; /* Responsive font size */
+    padding: 10px 5px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
+
 
 .nav a:hover {
     border-color: #ffffff; /* Change border color on hover (gold) */
@@ -146,13 +153,11 @@ main {
 
 @media (max-width: 600px) {
     .nav {
-        flex-direction: column; /* Stack nav items vertically on small screens */
         padding: 10px; /* Add padding for mobile */
     }
 
     .nav li {
-        display: block; /* Stack list items vertically */
-        margin: 5px 0; /* Space between tabs */
+        margin: 5px; /* Space between tabs */
     }
 
     .contact-box {
