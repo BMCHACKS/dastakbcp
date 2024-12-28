@@ -24,6 +24,7 @@ body {
     font-weight: 700;
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the footer */
     backdrop-filter: blur(0px); /* Blur effect for the footer */
+    position: relative; /* Ensure it stays within the viewport */
 }
 
 .menu {
