@@ -73,14 +73,15 @@ body {
 }
 
 .overlay {
-    position: absolute; /* Position overlay absolutely */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    top: 0; /* Start from the top */
+    left: 0; /* Start from the left */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 0; /* Ensure overlay is above the background but below content */
+    z-index: 0; /* Ensure it stays behind the content */
 }
+
 
 h4 {
     color: #FFF;
@@ -187,3 +188,13 @@ p {
     border-radius: 7px;
     background-color: #fff945;
 }
+
+html, body {
+    height: 100%; /* Ensure body takes up full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+
