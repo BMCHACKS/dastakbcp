@@ -149,31 +149,7 @@ main {
 .contact-phone,
 .contact-email {
     margin: 20px 0; /* Space above and below phone/email */
+    font-weight: 700;
 }
 
-@media (max-width: 600px) {
-    .nav {
-        padding: 10px; /* Add padding for mobile */
-    }
 
-    .nav li {
-        margin: 5px; /* Space between tabs */
-    }
-
-    .contact-box {
-        width: 90%; /* Make contact boxes responsive */
-        margin: 5px auto; /* Center contact boxes */
-    }
-
-    .footer {
-        padding: 10px; /* Adjust footer padding for mobile */
-    }
-
-    main {
-        padding: 10px; /* Adjust padding for mobile */
-    }
-
-    .info-box {
-        margin-bottom: 20px; /* Adjust margin for mobile */
-    }
-}
