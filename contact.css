@@ -43,34 +43,29 @@ header {
     position: fixed; /* Change to fixed to cover the entire viewport */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
-    width: 100%; /* Full viewport width */
-    height: 100%; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 0; /* Ensure overlay is below content */
 }
 
 .nav {
-    display: flex; /* Use flexbox for nav */
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center items */
-    background-color: rgba(249, 249, 249, 0.181);
-    border-radius: 10px;
-    padding: 0px; /* Add padding for mobile */
-    backdrop-filter: blur(10px);
-    max-width: 600px;
-    margin: 10px auto;
-    position: relative;
-    z-index: 2;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    background-color: rgba(249, 249, 249, 0.181); /* Semi-transparent background for the nav */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0px; /* Padding inside the nav */
+    backdrop-filter: blur(10px); /* Optional: keep the blur effect */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    max-width: 600px; /* Set a maximum width for the nav */
+    margin: 10px auto; /* Center the nav and add top margin */
+    position: relative; /* Ensure it scrolls with the page */
+    z-index: 2; /* Ensure it is above the overlay */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-weight: 700; /* Use heavy weight */
 }
 
 .nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex; /* Use flexbox for ul */
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center items */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 .nav li {
@@ -79,15 +74,14 @@ header {
 }
 
 .nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1vw; /* Responsive font size */
-    padding: 10px 5px;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-size: 1.2em; /* Font size for links */
+    padding: 10px 5px; /* Padding for the links */
+    border-radius: 15px; /* Rounded corners for the links */
+    border: 2px solid transparent; /* Initial border (transparent) */
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
 }
-
 
 .nav a:hover {
     border-color: #ffffff; /* Change border color on hover (gold) */
@@ -107,7 +101,7 @@ main {
 
 .info-box {
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px ; /* Rounded corners */
     padding: 20px; /* Padding inside the box */
     backdrop-filter: blur(10px); /* Blur effect */
     max-width: 700px; /* Max width for the info box */
@@ -149,7 +143,5 @@ main {
 .contact-phone,
 .contact-email {
     margin: 20px 0; /* Space above and below phone/email */
-    font-weight: 300;
 }
-
 
