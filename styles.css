@@ -15,13 +15,13 @@ body {
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
+    display: flex; /* Use flexbox for a single column layout */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
     gap: 20px; /* Space between cards */
     padding: 20px; /* Padding around the grid */
-    justify-content: center; /* Center the grid */
     max-width: 100%; /* Ensure the grid does not overflow */
-    margin-top: 100px; /* Add space above the card container */
+    margin-top: 50px; /* Add space above the card container */
 }
 
 .card {
@@ -33,15 +33,14 @@ body {
     cursor: pointer; /* Pointer cursor on hover */
     position: relative; /* For positioning child elements */
     width: 100%; /* Full width of the column */
-    max-width: 250px; /* Adjusted maximum width for cards */
-    height: 250px; /* Adjusted fixed height for square cards */
+    max-width: 500px; /* Adjusted maximum width for cards */
+    height: auto; /* Allow height to adjust based on content */
     display: flex; /* Use flexbox for centering content */
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
     backdrop-filter: blur(10px);
 }
-
 
 .card img {
     width: 100%; /* Full width of the card */
