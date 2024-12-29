@@ -145,3 +145,32 @@ main {
     margin: 20px 0; /* Space above and below phone/email */
 }
 
+.location-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-text {
+    flex: 1;
+    color: #f1f1f1; /* Light text color */
+    margin-right: 20px; /* Space between text and map */
+}
+
+.location-text h2 {
+    margin-top: 0;
+    color: #fffaea; /* Light text color */
+}
+
+.location-text p {
+    margin: 0;
+}
+
+.location-map iframe {
+    border-radius: 10px;
+    border: 0; /* Remove iframe border */
+}
