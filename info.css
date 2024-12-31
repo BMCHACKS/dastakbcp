@@ -33,6 +33,7 @@ header {
     text-align: center; /* Center text */
     color: white; /* Text color */
     z-index: 2; /* Ensure content is above the overlay */
+    margin-bottom: 5%;
 }
 
 .overlay {
@@ -143,3 +144,8 @@ h1 {
     line-height: 1.5; /* Adjust this value as needed for spacing */
     margin-bottom: 2px; /* Space between paragraphs */
 }
+
+.everything2{
+    margin-top: 10px;
+}
+
