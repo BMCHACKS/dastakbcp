@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.6"> -->
     <title>Landing Page</title>
     <link rel="stylesheet" href="landing.css"> <!-- Link to your CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
-    <div class="menu">
-        <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with your logo image -->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>-</li>
-                <li><a href="info.html">Info</a></li>
-                <li>-</li>
-                <li><a href="categories.html">Categories</a></li>
-                <li>-</li>
-                <li><a href="#invite">Invite</a></li>
-                <li>-</li>
-                <li><a href="#register">Register</a></li>
-                <li>-</li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="index_e">
+        <div class="menu">
+            <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with your logo image -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>-</li>
+                    <li><a href="info.html">Info</a></li>
+                    <li>-</li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li>-</li>
+                    <li><a href="#invite">Invite</a></li>
+                    <li>-</li>
+                    <li><a href="#register">Register</a></li>
+                    <li>-</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <footer class="footer">
+            Made By Basil.MC & Qasim.M | © 2025 Dastak All Rights Reserved
+        </footer>
     </div>
-    <footer class="footer">
-        Made By Basil.MC & Qasim.M | © 2025 Dastak All Rights Reserved
-    </footer>
     <div class="overlay"></div>
     <script>
         // Array of background variations
@@ -52,7 +54,7 @@
 
         // Logo tilt effect
         const logo = document.querySelector('.logo');
-        const tiltRadius = 500; // Radius for the tilt effect
+        const tiltRadius = 1000; // Radius for the tilt effect
 
         document.addEventListener('mousemove', (event) => {
             const rect = logo.getBoundingClientRect();
