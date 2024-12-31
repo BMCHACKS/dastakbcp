@@ -86,3 +86,7 @@ body {
     z-index: 2; /* Ensure footer is above the overlay */
     background-color: transparent; /* No background color */
 }
+
+.index_e{
+    z-index: 2;
+}
